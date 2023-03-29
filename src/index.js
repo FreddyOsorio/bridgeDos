@@ -13,7 +13,7 @@ process.on('exit', async () => {
 await persistence.init()
 
 const bankName = 'Demo bank Qik'
-const port = 3001
+const port = 4001
 console.log('index -->a');
 const app = express()
 console.log('index -->b');
