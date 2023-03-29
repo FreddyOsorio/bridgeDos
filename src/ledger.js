@@ -32,11 +32,11 @@ const ledger = new LedgerSdk({
 // This function is used to notify Ledger of Entry processing final statuses.
 export async function notifyLedger(entry, action, notifyStates) {
   const notifyAction = entry.actions[action]
-  console.log('ledger --> notifyLedger');
+  
   if (!notifyStates.includes(notifyAction.state)) {
     return
   }
-  console.log('ledger --> notifyLedger-->1');
+  
   const custom = {
     handle: entry.handle,
     status: notifyAction.state,

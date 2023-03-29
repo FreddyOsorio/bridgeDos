@@ -51,7 +51,6 @@ export class Account {
   }
 
   credit(amount) {
-    console.log('core.js --> credit(amount');
     this.assertIsActive()
 
     this.balance = this.balance + amount

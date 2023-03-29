@@ -14,19 +14,19 @@ await persistence.init()
 
 const bankName = 'Demo bank Dos Qik'
 const port = 4001
-console.log('index -->a');
+
 const app = express()
-console.log('index -->b');
+
 app.use(express.json())
-console.log('index -->c');
+
 app.use(logRequest)
-console.log('index -->1');
+
 app.get('/', (req, res) => {
   res.send(`${bankName} is running!`)
 })
-console.log('index --> 2');
+
 app.post('/v2/credits', asyncErrorWrapper(prepareCredit))
-console.log('index -->3')
+
 app.post('/v2/credits/:handle/commit', asyncErrorWrapper(commitCredit))
 app.post('/v2/credits/:handle/abort', asyncErrorWrapper(abortCredit))
 
