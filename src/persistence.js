@@ -7,7 +7,7 @@ export async function init() {
 
     user: 'bridge_service',
     host: 'database-1.cluster-c412hrenus5z.us-east-2.rds.amazonaws.com',
-    database: 'bridge_service',
+    database: 'bridge_dos_service',
     password: 'bridge_service',
     port: 5432,
   })
